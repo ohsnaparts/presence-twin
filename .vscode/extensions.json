@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "bierner.markdown-mermaid",
+        "davidanson.vscode-markdownlint",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "gruntfuggly.todo-tree"
+    ]
+}
