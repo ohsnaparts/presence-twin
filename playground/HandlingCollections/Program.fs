@@ -15,13 +15,13 @@ let ensureFile (filePath: string) : unit =
 
 [<EntryPoint>]
 let main (args: string[]) : int =
-    let studentScoresCsvFilePath = "./StudentScores.txt"
+    let studentScoresCsvFilePath = "./StudentScores.csv"
     let mutable errorCode = ErrorCodes.Success
 
     try
-        let students = StudentCsvParser.parse studentScoresCsvFilePath
-        for student in students do
-            printfn "%s" (student.ToString())
+        StudentCsvParser.parse studentScoresCsvFilePath
+        |> Array.sortByDescending (fun s -> s.Average.Value)
+        |> Array.iter (fun s -> printfn $"{s}")
     with
     | :? FileNotFoundException as ex ->
         printfn $"Unable to process student scores: {ex.Message}"
