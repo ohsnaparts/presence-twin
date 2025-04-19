@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "rQqE+uysvKZUhIMzKJhZl0X1Iwav/y+hoCJC9nayaoE=",
+  "Source": "PresenceTwin.Api",
+  "BasePath": "_content/PresenceTwin.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
