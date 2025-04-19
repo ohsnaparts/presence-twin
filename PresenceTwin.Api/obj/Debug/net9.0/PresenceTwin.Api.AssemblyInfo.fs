@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("PresenceTwin.Api")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca068f0333c9c18416e81bf90725cdd3f6c1af9b")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b137614599d9d40b22097f2848dafdadc63595a")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("PresenceTwin.Api")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("PresenceTwin.Api")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]

@@ -2,7 +2,7 @@
 
 module HandlingCollections.Student
 
-type Student(name: string, id: string, scores: float[]) =
+type Student(surname: string, givenName: string, id: string, scores: float[]) =
     let calculateAverage () = scores |> Array.average
     let calculateSum () = scores |> Array.sum
     let calculateMin () = scores |> Array.min
@@ -13,7 +13,8 @@ type Student(name: string, id: string, scores: float[]) =
     let _min: Lazy<float> = lazy (calculateMin ())
     let _max: Lazy<float> = lazy (calculateMax ())
 
-    member val Name = name with get
+    member val Surname = surname with get
+    member val GivenName = givenName with get
     member val Id = id with get
     member val Scores = scores with get
     member this.Average = _average
@@ -23,8 +24,9 @@ type Student(name: string, id: string, scores: float[]) =
 
     override this.ToString() : string =
         sprintf
-            "Scores of student %s range between %f and %f (mean %f)"
-            this.Name
+            "Scores of student %s-%s range between %f and %f (mean %f)"
+            this.Surname
+            this.GivenName
             this.Min.Value
             this.Max.Value
             this.Average.Value

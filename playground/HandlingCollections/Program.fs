@@ -20,7 +20,7 @@ let main (args: string[]) : int =
 
     try
         StudentCsvParser.parse studentScoresCsvFilePath
-        |> Array.sortByDescending (fun s -> s.Average.Value)
+        |> Array.sortBy (fun s -> s.Average.Value)
         |> Array.iter (fun s -> printfn $"{s}")
     with
     | :? FileNotFoundException as ex ->
