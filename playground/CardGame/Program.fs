@@ -8,15 +8,26 @@ type ErrorCodes =
     static member public UnhandledError = 1
 
 [<EntryPoint>]
-let main args: int =
+let main args : int =
     try
         let seed = Random.Shared.Next()
-        Cards.newDeck
-        |> shuffle seed
-        |> List.groupBy (fun (Card (suit, _)) -> suit)
-        |> List.iter (fun (suit, group) -> printfn $"{suit}: {group}")
+        let mutable deck: ShuffledDeck = Cards.newDeck |> shuffle 123
+
+        while (true) do
+            Console.WriteLine("Draw a card (Enter/Ctrl+C)?")
+            Console.ReadKey() |> ignore
+            let (newDeck, card) = dealCard deck
+
+            let unpackedNewDeck = newDeck |> unpackDeck
+            printCard card
+
+            printfn "Next up: "
+            printDeckOverview 5 unpackedNewDeck
+            printfn "\n"
+
+            deck <- newDeck
+
         ErrorCodes.Success
-    with
-    | ex -> 
+    with ex ->
         printfn $"An unknown exception has been thrown: {ex.Message}"
         ErrorCodes.UnhandledError

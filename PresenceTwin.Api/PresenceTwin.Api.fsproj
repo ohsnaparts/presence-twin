@@ -8,6 +8,8 @@
         <Compile Include="WeatherForecast.fs"/>
         <Compile Include="Controllers/WeatherForecastController.fs"/>
         <Compile Include="Program.fs"/>
+        <Content Include=".gitignore" />
+        <Content Include="README.md" />
     </ItemGroup>
 
 </Project>

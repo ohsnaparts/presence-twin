@@ -10,8 +10,9 @@ let ``Should return 51 cards when dealing a card from a new deck`` () =
     let expected = 52 - 1
     let deck: Deck = newDeck
     // Act
-    let (newDeck, _) = dealCard deck
-    let actual = newDeck |> List.length
+    let shuffledDeck: ShuffledDeck = ShuffledDeck deck
+    let (newDeck, _) = dealCard shuffledDeck
+    let actual = newDeck |> countCardsInShuffledDeck
     // Assert
     Assert.Equal(expected, actual)
 
@@ -20,8 +21,9 @@ let ``Should return 0 cards when dealing a card from a depleted deck`` () =
     // Arrange
     let expected = 0
     // Act
-    let newDeck,_ = dealCard []
-    let actual = newDeck |> List.length
+    let deck = ShuffledDeck []
+    let newDeck,_ = dealCard deck
+    let actual = newDeck |> countCardsInShuffledDeck
     // Assert
     Assert.Equal(expected, actual)
 

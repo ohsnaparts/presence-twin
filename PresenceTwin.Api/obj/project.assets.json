@@ -114,11 +114,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Workspace\\zube-space\\presence-twin\\PresenceTwin.Api\\PresenceTwin.Api.fsproj",
+      "projectUniqueName": "G:\\BACKUPS\\Workspace\\zube-space\\presence-twin\\PresenceTwin.Api\\PresenceTwin.Api.fsproj",
       "projectName": "PresenceTwin.Api",
-      "projectPath": "C:\\Workspace\\zube-space\\presence-twin\\PresenceTwin.Api\\PresenceTwin.Api.fsproj",
+      "projectPath": "G:\\BACKUPS\\Workspace\\zube-space\\presence-twin\\PresenceTwin.Api\\PresenceTwin.Api.fsproj",
       "packagesPath": "C:\\Users\\kami\\.nuget\\packages\\",
-      "outputPath": "C:\\Workspace\\zube-space\\presence-twin\\PresenceTwin.Api\\obj\\",
+      "outputPath": "G:\\BACKUPS\\Workspace\\zube-space\\presence-twin\\PresenceTwin.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
