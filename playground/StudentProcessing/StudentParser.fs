@@ -36,7 +36,8 @@ type StudentCsvParser() =
                     $"the name [{name}] is not in the correct format [<Surname>{NameSeparator}<GiveName>]"
                 )
             )
-
+      
+    
     static let convertRowToStudent (invalidScoreFallback: TestResult) (row: string) : Student =
         let elements = row.Split(ColumnSeparator)
 

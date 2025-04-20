@@ -40,4 +40,8 @@ let myMain argv : int =
     // brackets are optional
     greeter "F#"
     // return an integer exit code
+    
+    let mutable myList = List.Empty
+    myList <- 12 :: myList
+    
     0
