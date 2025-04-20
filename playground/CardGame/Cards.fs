@@ -34,3 +34,10 @@ let allRanks =
 let deck =
     allSuits
     |> List.collect (fun suit -> allRanks |> List.map (fun rank -> Card(suit, rank)))
+
+
+let dealCard (deck: Deck): (Deck * Card) =
+    [], Card (Clubs, Ten)
+
+type Deal = Deck -> Deck * Card
+let DealCard: Deal = dealCard
