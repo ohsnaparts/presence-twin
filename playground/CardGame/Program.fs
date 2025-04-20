@@ -1,5 +1,6 @@
 ﻿module CardGame.Program
 
+open System
 open CardGame.Cards
 
 type ErrorCodes =
@@ -9,7 +10,9 @@ type ErrorCodes =
 [<EntryPoint>]
 let main args: int =
     try
+        let seed = Random.Shared.Next()
         Cards.newDeck
+        |> shuffle seed
         |> List.groupBy (fun (Card (suit, _)) -> suit)
         |> List.iter (fun (suit, group) -> printfn $"{suit}: {group}")
         ErrorCodes.Success

@@ -1,5 +1,7 @@
 ﻿module CardGame.Cards
 
+open System
+
 type Suit =
     | Hearts
     | Diamonds
@@ -37,7 +39,6 @@ let newDeck =
     allSuits
     |> List.collect (fun suit -> allRanks |> List.map (fun rank -> Card(suit, rank)))
 
-
 let dealCard (deck: Deck) : Dealing =
     let (restDeck, topCard) =
         match deck.Length with
@@ -47,3 +48,7 @@ let dealCard (deck: Deck) : Dealing =
             let restDeck = deck |> List.skip 1
             (restDeck, topCard)
     restDeck, topCard
+
+// we pass in the seed here so that we keep this function idempotent
+let shuffle (seed: int) (deck: Deck): Deck =
+    deck |> List.randomShuffleWith (Random seed)
