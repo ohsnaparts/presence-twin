@@ -9,7 +9,7 @@ type ErrorCodes =
 [<EntryPoint>]
 let main args: int =
     try
-        Cards.deck
+        Cards.newDeck
         |> List.groupBy (fun (Card (suit, _)) -> suit)
         |> List.iter (fun (suit, group) -> printfn $"{suit}: {group}")
         ErrorCodes.Success
