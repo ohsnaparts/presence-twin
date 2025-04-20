@@ -6,16 +6,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include="StudentScores.csv">
-          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </Content>
+        <Compile Include="Optional.fs" />
+        <Compile Include="TestResult.fs" />
         <Compile Include="Student.fs" />
         <Compile Include="StudentParser.fs" />
         <Compile Include="Program.fs"/>
+        
+        <Content Include="StudentScores.csv">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
     </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="obj\Debug\net9.0\" />
-    </ItemGroup>
-
 </Project>

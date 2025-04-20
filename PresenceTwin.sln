@@ -6,7 +6,9 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HelloFSharp", "playground\H
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PresenceTwin.Api", "PresenceTwin.Api\PresenceTwin.Api.fsproj", "{74E60D1A-BB26-434B-AB06-9BFC4E1558A2}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HandlingCollections", "playground\HandlingCollections\HandlingCollections.fsproj", "{D17C8BA6-9261-4104-A364-2F6807AA5AC0}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "StudentProcessing", "playground\StudentProcessing\StudentProcessing.fsproj", "{D17C8BA6-9261-4104-A364-2F6807AA5AC0}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CurriedParams", "CurriedParams\CurriedParams.fsproj", "{5999EF60-7865-41E1-B16E-DD49523B67EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,6 +18,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{14432A86-A214-41A6-A000-A8381DA6C6DD} = {B039A747-4D27-42FE-91A9-9BE4F0F768E1}
 		{D17C8BA6-9261-4104-A364-2F6807AA5AC0} = {B039A747-4D27-42FE-91A9-9BE4F0F768E1}
+		{5999EF60-7865-41E1-B16E-DD49523B67EA} = {B039A747-4D27-42FE-91A9-9BE4F0F768E1}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{14432A86-A214-41A6-A000-A8381DA6C6DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +33,9 @@ Global
 		{D17C8BA6-9261-4104-A364-2F6807AA5AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D17C8BA6-9261-4104-A364-2F6807AA5AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D17C8BA6-9261-4104-A364-2F6807AA5AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5999EF60-7865-41E1-B16E-DD49523B67EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5999EF60-7865-41E1-B16E-DD49523B67EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5999EF60-7865-41E1-B16E-DD49523B67EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5999EF60-7865-41E1-B16E-DD49523B67EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

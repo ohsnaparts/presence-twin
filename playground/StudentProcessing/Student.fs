@@ -1,12 +1,15 @@
 ﻿// ReSharper disable FSharpInterpolatedString
 
-module HandlingCollections.Student
+module StudentProcessing.Student
 
-type Student(surname: string, givenName: string, id: string, scores: float[]) =
-    let calculateAverage () = scores |> Array.average
-    let calculateSum () = scores |> Array.sum
-    let calculateMin () = scores |> Array.min
-    let calculateMax () = scores |> Array.max
+open StudentProcessing.TestResult
+
+type Student(surname: string, givenName: string, id: string, scores: TestResult[]) =
+    let getScore (result: TestResult): float = result.getEffectiveScore()
+    let calculateAverage () = scores |> Array.map getScore |> Array.average
+    let calculateSum () = scores |> Array.map getScore |> Array.sum
+    let calculateMin () = scores |> Array.map getScore |> Array.min
+    let calculateMax () = scores |> Array.map getScore |> Array.max
 
     let _average: Lazy<float> = lazy (calculateAverage ())
     let _sum: Lazy<float> = lazy (calculateSum ())

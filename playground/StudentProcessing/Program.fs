@@ -1,7 +1,6 @@
 ﻿// ReSharper disable FSharpInterpolatedString
-
-open HandlingCollections
-open HandlingCollections.StudentCsvParser
+open StudentProcessing.Optional
+open StudentProcessing.StudentCsvParser
 open System.IO
 
 type ErrorCodes =
@@ -17,11 +16,17 @@ let ensureFile (filePath: string) : unit =
 let main (args: string[]) : int =
     let studentScoresCsvFilePath = "./StudentScores.csv"
     let mutable errorCode = ErrorCodes.Success
+    // to explore generics, I created my own version of `option`
+    let maxLines: Optional<int> = 
+        match args with
+        | [| _; maxLines |] -> Something(int maxLines)
+        | _ -> Nothing
 
     try
-        StudentCsvParser.parse studentScoresCsvFilePath
+        StudentCsvParser.parse studentScoresCsvFilePath maxLines 
         |> Array.sortBy (fun s -> s.Average.Value)
-        |> Array.iter (fun s -> printfn $"{s}")
+        |> Array.iter (printfn "%O")
+        // https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/plaintext-formatting
     with
     | :? FileNotFoundException as ex ->
         printfn $"Unable to process student scores: {ex.Message}"
