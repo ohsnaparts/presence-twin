@@ -1,11 +1,9 @@
 ﻿module PresenceTwin.Api.Tests.WeatherForecastApiTests
 
 open System.Text.Json
-open System.Threading.Tasks
 open FluentAssertions
 open Microsoft.AspNetCore.Mvc.Testing
 open PresenceTwin.Api.Startup
-open PresenceTwin.Api.WeatherService
 open PresenceTwin.Api.models.WeatherReading
 open Xunit
 

@@ -30,6 +30,8 @@
         <Compile Include="Features\WeatherReadings\ViewModels\WeatherReadingViewModel.fs" />
         <Compile Include="Features\WeatherReadings\Controllers\WeatherForecastController.fs" />
         <Compile Include="Features\WeatherReadings\Mapping\WeatherMappingsProfile.fs" />
+        <Compile Include="Features\Shared\IKeyValueStore.fs" />
+        <Compile Include="Features\Shared\InMemoryStore.fs" />
         <Compile Include="IoC\RootModule.fs"/>
         <Compile Include="Startup.fs"/>
         <Compile Include="Program.fs"/>

@@ -1,17 +1,10 @@
 ﻿namespace PresenceTwin.Api.Controllers
 
-open System
-open System.Collections.Generic
-open System.Linq
 open System.Threading.Tasks
 open AutoMapper
 open Microsoft.AspNetCore.Mvc
 open Microsoft.Extensions.Logging
-open PresenceTwin.Api.Features.WeatherReadings.UserCases
 open PresenceTwin.Api.Features.WeatherReadings.UserCases.GetWeatherReadingsQuery
-open PresenceTwin.Api.WeatherService
-open PresenceTwin.Api.models.WeatherReading
-open PresenceTwin.Features.WeatherReadings.ViewModels
 open PresenceTwin.Features.WeatherReadings.ViewModels.WeatherReadingViewModel
 
 [<ApiController>]

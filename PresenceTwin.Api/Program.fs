@@ -2,22 +2,9 @@ namespace PresenceTwin.Api
 
 #nowarn "20"
 
-open System
-open System.Collections.Generic
-open System.IO
-open System.Linq
-open System.Reflection
-open System.Threading.Tasks
-open Autofac
 open Autofac.Extensions.DependencyInjection
-open Microsoft.AspNetCore
-open Microsoft.AspNetCore.Builder
 open Microsoft.AspNetCore.Hosting
-open Microsoft.AspNetCore.HttpsPolicy
-open Microsoft.Extensions.Configuration
-open Microsoft.Extensions.DependencyInjection
 open Microsoft.Extensions.Hosting
-open Microsoft.Extensions.Logging
 
 // static class of error codes
 type ExitCode =

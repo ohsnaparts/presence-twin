@@ -1,6 +1,5 @@
 ﻿module StudentProcessing.TestResult
 
-open System.Collections.Generic
 
 // Discriminated Unions
 type TestResult =

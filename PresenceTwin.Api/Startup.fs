@@ -9,7 +9,6 @@ open Microsoft.AspNetCore.Hosting
 open Microsoft.Extensions.DependencyInjection
 open Microsoft.Extensions.Hosting
 open Microsoft.OpenApi.Models
-open PresenceTwin.Api.WeatherService
 
 type Startup() =
     member _.ConfigureServices(services: IServiceCollection) : unit =

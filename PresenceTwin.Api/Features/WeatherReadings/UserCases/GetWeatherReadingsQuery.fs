@@ -2,7 +2,6 @@
 
 open MediatR
 open PresenceTwin.Api.WeatherService
-open PresenceTwin.Api.models
 open PresenceTwin.Api.models.WeatherReading
 open System.Threading.Tasks
 

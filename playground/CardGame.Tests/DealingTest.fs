@@ -1,6 +1,5 @@
 ﻿module DealingTest
 
-open System
 open CardGame.Cards
 open Xunit
 
