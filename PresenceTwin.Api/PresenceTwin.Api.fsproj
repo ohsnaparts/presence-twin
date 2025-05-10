@@ -8,25 +8,31 @@
         <Content Include="..\README.md">
             <Link>README.md</Link>
         </Content>
+        <Content Include="..\.gitignore">
+            <Link>.gitignore</Link>
+        </Content>
     </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Autofac" Version="8.3.0"/>
         <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0"/>
+        <PackageReference Include="AutoMapper.Contrib.Autofac.DependencyInjection" Version="9.0.0"/>
+        <PackageReference Include="MediatR" Version="12.5.0"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1"/>
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Include="WeatherForecast.fs"/>
-        <Compile Include="Controllers/WeatherForecastController.fs"/>
+        <Compile Include="Features\WeatherReadings\Models\Temperature.fs"/>
+        <Compile Include="Features\WeatherReadings\Models\WeatherReading.fs"/>
+        <Compile Include="Features\WeatherReadings\Services\WeatherService.fs"/>
+        <Compile Include="Features\WeatherReadings\UserCases\GetWeatherReadingsQuery.fs"/>
+        <Compile Include="Features\WeatherReadings\ViewModels\TemperatureViewModel.fs" />
+        <Compile Include="Features\WeatherReadings\ViewModels\WeatherReadingViewModel.fs" />
+        <Compile Include="Features\WeatherReadings\Controllers\WeatherForecastController.fs" />
+        <Compile Include="Features\WeatherReadings\Mapping\WeatherMappingsProfile.fs" />
         <Compile Include="IoC\RootModule.fs"/>
-    </ItemGroup>
-
-    <ItemGroup>
         <Compile Include="Startup.fs"/>
         <Compile Include="Program.fs"/>
-        <Content Include="..\.gitignore">
-            <Link>.gitignore</Link>
-        </Content>
     </ItemGroup>
 
 </Project>

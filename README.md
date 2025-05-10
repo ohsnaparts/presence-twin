@@ -6,6 +6,17 @@ A web application that provides an API to
 1. Store the state of the device as digital twin
 1. Enable cloud applications to interact with the digital twin with the device
 
+
+## Quickstart
+
+```shell
+# 1. build and run
+dotnet run
+# 2. the web browser opens automagically
+# 3. browse to /swagger
+```
+
+
 ## System Diagram
 
 ```mermaid
