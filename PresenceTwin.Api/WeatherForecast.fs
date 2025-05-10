@@ -1,10 +1,12 @@
-namespace PresenceTwin.Api
+module PresenceTwin.Api.WeatherForecast
 
 open System
 
-type WeatherForecast =
-    { Date: DateTime
-      TemperatureC: int
-      Summary: string }
+type public IWeatherForecast =
+    abstract member GetTemperatureF: unit -> float
 
-    member this.TemperatureF = 32.0 + (float this.TemperatureC / 0.5556)
+type public WeatherForecast() =
+    interface IWeatherForecast with
+        member _.GetTemperatureF() =
+            let degrees = Random.Shared.NextDouble()
+            32.0 + (degrees / 0.5556)
