@@ -25,7 +25,7 @@
         <Compile Include="Startup.fs"/>
         <Compile Include="Program.fs"/>
         <Content Include="..\.gitignore">
-          <Link>.gitignore</Link>
+            <Link>.gitignore</Link>
         </Content>
     </ItemGroup>
 

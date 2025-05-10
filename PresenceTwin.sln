@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CardGame", "CardGame", "{BB
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CardGame", "playground\CardGame\CardGame.fsproj", "{91CFD786-2B84-4ED5-80F4-C14079B2C19A}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PresenceTwin.Api.Tests", "PresenceTwin.Api.Tests\PresenceTwin.Api.Tests.fsproj", "{75A0828B-190E-4EAF-AD7F-D9E405A624FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +56,9 @@ Global
 		{91CFD786-2B84-4ED5-80F4-C14079B2C19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91CFD786-2B84-4ED5-80F4-C14079B2C19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91CFD786-2B84-4ED5-80F4-C14079B2C19A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75A0828B-190E-4EAF-AD7F-D9E405A624FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75A0828B-190E-4EAF-AD7F-D9E405A624FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75A0828B-190E-4EAF-AD7F-D9E405A624FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75A0828B-190E-4EAF-AD7F-D9E405A624FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

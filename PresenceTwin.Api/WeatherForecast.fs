@@ -9,4 +9,5 @@ type public WeatherForecast() =
     interface IWeatherForecast with
         member _.GetTemperatureF() =
             let degrees = Random.Shared.NextDouble()
-            32.0 + (degrees / 0.5556)
+            let fahrenheit = 32.0 + (degrees / 0.5556)
+            fahrenheit
