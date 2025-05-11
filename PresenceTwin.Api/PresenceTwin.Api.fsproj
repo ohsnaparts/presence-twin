@@ -33,9 +33,11 @@
         <Compile Include="Features\WeatherReadings\Mapping\WeatherMappingsProfile.fs" />
         <Compile Include="Features\Shared\IKeyValueStore.fs" />
         <Compile Include="Features\Shared\InMemoryStore.fs" />
-        <Compile Include="Features\Shared\DigitalTwin.fs" />
+        <Compile Include="Features\Shared\Models\DigitalTwin.fs" />
+        <Compile Include="Features\Shared\ViewModels\DigitalTwinViewModel.fs" />
         <Compile Include="Features\PersistDigitalTwin\UseCases\PersistDigitalTwinRequest.fs" />
         <Compile Include="Features\PersistDigitalTwin\Controller\PersistDigitalTwinController.fs" />
+        <Compile Include="Features\PersistDigitalTwin\Mappings\PersistDigitalTwinMappingProfile.fs" />
         <Compile Include="Features\GetDigitalTwin\Controller\GetDigitalTwinController.fs" />
         <Compile Include="IoC\RootModule.fs"/>
         <Compile Include="Startup.fs"/>

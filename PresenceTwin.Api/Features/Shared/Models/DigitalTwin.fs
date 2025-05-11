@@ -1,4 +1,4 @@
-﻿module PresenceTwin.Api.Features.Shared.DigitalTwin
+﻿module PresenceTwin.Api.Features.Shared.Models.DigitalTwin
 
 open System.Collections.Generic
 
