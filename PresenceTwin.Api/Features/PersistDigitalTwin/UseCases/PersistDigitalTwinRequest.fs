@@ -1,14 +1,11 @@
 ﻿module PresenceTwin.Api.Features.PersistDigitalTwin.UseCases.PersistDigitalTwinRequest
 
-open System.Text.Json
 open System.Threading.Tasks
 open AutoMapper
 open MediatR
 open Microsoft.Extensions.Logging
 open PresenceTwin.Api.Features.PersistDigitalTwin.Repositories.PersistDigitalTwinRepository
-open PresenceTwin.Api.Features.Shared.Infrastructure
 open PresenceTwin.Api.Features.Shared.Infrastructure.DigitalTwinEntity
-open PresenceTwin.Api.Features.Shared.Models.DigitalTwin
 open PresenceTwin.Api.Features.Shared.ViewModels.DigitalTwinViewModel
 
 type PersistDigitalTwinRequest(twin: DigitalTwinViewModel) =

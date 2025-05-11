@@ -23,6 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Compile Include="Extensions\ObjectExtensions.fs" />
         <Compile Include="Features\WeatherReadings\Models\Temperature.fs"/>
         <Compile Include="Features\WeatherReadings\Models\WeatherReading.fs"/>
         <Compile Include="Features\WeatherReadings\Services\WeatherService.fs"/>
@@ -37,10 +38,11 @@
         <Compile Include="Features\Shared\Infrastructure\InMemoryStore.fs" />
         <Compile Include="Features\Shared\Infrastructure\DigitalTwinEntity.fs" />
         <Compile Include="Features\Shared\Mapping\SharedMappingProfile.fs" />
-        <Compile Include="Features\PersistDigitalTwin\Mappings\PersistDigitalTwinMappingProfile.fs" />
         <Compile Include="Features\PersistDigitalTwin\Repositories\PersistDigitalTwinRepository.fs" />
         <Compile Include="Features\PersistDigitalTwin\UseCases\PersistDigitalTwinRequest.fs" />
         <Compile Include="Features\PersistDigitalTwin\Controller\PersistDigitalTwinController.fs" />
+        <Compile Include="Features\GetDigitalTwin\Repository\GetDigitalTwinRepository.fs" />
+        <Compile Include="Features\GetDigitalTwin\UseCases\GetDigitalTwinRequest.fs" />
         <Compile Include="Features\GetDigitalTwin\Controller\GetDigitalTwinController.fs" />
         <Compile Include="IoC\RootModule.fs"/>
         <Compile Include="Startup.fs"/>

@@ -4,7 +4,6 @@ open MediatR
 open Microsoft.AspNetCore.Mvc
 open Microsoft.Extensions.Logging
 open PresenceTwin.Api.Features.PersistDigitalTwin.UseCases.PersistDigitalTwinRequest
-open PresenceTwin.Api.Features.Shared.ViewModels
 open PresenceTwin.Api.Features.Shared.ViewModels.DigitalTwinViewModel
 
 [<ApiController>]

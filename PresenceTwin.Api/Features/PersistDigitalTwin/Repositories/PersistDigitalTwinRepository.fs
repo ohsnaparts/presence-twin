@@ -1,6 +1,6 @@
 ﻿module PresenceTwin.Api.Features.PersistDigitalTwin.Repositories.PersistDigitalTwinRepository
 
-open System.Text.Json
+open PresenceTwin.Api.Extensions.ObjectExtensions
 open Microsoft.Extensions.Logging
 open PresenceTwin.Api.Features.Shared.Infrastructure.DigitalTwinEntity
 open PresenceTwin.Api.Features.Shared.Store.IKeyValueStore
@@ -11,6 +11,5 @@ type public IPersistDigitalTwinRepository =
 type public PersistDigitalTwinRepository(logger: ILogger<PersistDigitalTwinRepository>, store: IKeyValueStore) =
     interface IPersistDigitalTwinRepository with
         member this.Set (twin: DigitalTwinEntity) : unit =
-            let json = JsonSerializer.Serialize(twin, JsonSerializerOptions())
-            logger.LogDebug("Persisting entity with Id={id} and Value={value}", id, json)
-            store.Set twin.Id twin
+            logger.LogDebug("Persisting entity with Id={id} and Value={value}", id, twin.ToJson())
+            store.Set twin.DeviceId twin

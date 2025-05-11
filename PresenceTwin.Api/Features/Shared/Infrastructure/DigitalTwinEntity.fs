@@ -2,8 +2,8 @@
 
 open System.Collections.Generic
 
-type public DigitalTwinEntity(id: string) =
-    member val Id: string = id with get, set
+type public DigitalTwinEntity(deviceId: string) =
+    member val DeviceId: string = deviceId with get, set
     member val Reported: IDictionary<string, obj> = Dictionary<string, obj>() with get, set
     member val Desired: IDictionary<string, obj> = Dictionary<string, obj>() with get, set
     

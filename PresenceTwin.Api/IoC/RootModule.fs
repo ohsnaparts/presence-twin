@@ -1,6 +1,7 @@
 ﻿module PresenceTwin.IoC.RootModule
 
 open Autofac
+open PresenceTwin.Api.Features.GetDigitalTwin.Repository.GetDigitalTwinRepository
 open PresenceTwin.Api.Features.PersistDigitalTwin.Repositories.PersistDigitalTwinRepository
 open PresenceTwin.Api.Features.Shared.Store.IKeyValueStore
 open PresenceTwin.Api.Features.Shared.Store.InMemoryStore
@@ -22,4 +23,7 @@ type public RootModule() =
         builder
             .RegisterType<PersistDigitalTwinRepository>()
             .As<IPersistDigitalTwinRepository>()
+        |> ignore
+
+        builder.RegisterType<GetDigitalTwinRepository>().As<IGetDigitalTwinRepository>()
         |> ignore

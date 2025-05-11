@@ -9,6 +9,7 @@
 
     <ItemGroup>
         <Compile Include="WeatherForecastApiTests.fs" />
+        <Compile Include="DeviceTwinApiTests.fs" />
     </ItemGroup>
     
     <ItemGroup>
