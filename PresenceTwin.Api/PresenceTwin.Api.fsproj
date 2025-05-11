@@ -18,6 +18,7 @@
         <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0"/>
         <PackageReference Include="AutoMapper.Contrib.Autofac.DependencyInjection" Version="9.0.0"/>
         <PackageReference Include="MediatR" Version="12.5.0"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.4" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1"/>
     </ItemGroup>
 
@@ -25,13 +26,17 @@
         <Compile Include="Features\WeatherReadings\Models\Temperature.fs"/>
         <Compile Include="Features\WeatherReadings\Models\WeatherReading.fs"/>
         <Compile Include="Features\WeatherReadings\Services\WeatherService.fs"/>
-        <Compile Include="Features\WeatherReadings\UserCases\GetWeatherReadingsQuery.fs"/>
+        <Compile Include="Features\WeatherReadings\UserCases\GetWeatherReadingsRequest.fs" />
         <Compile Include="Features\WeatherReadings\ViewModels\TemperatureViewModel.fs" />
         <Compile Include="Features\WeatherReadings\ViewModels\WeatherReadingViewModel.fs" />
         <Compile Include="Features\WeatherReadings\Controllers\WeatherForecastController.fs" />
         <Compile Include="Features\WeatherReadings\Mapping\WeatherMappingsProfile.fs" />
         <Compile Include="Features\Shared\IKeyValueStore.fs" />
         <Compile Include="Features\Shared\InMemoryStore.fs" />
+        <Compile Include="Features\Shared\DigitalTwin.fs" />
+        <Compile Include="Features\PersistDigitalTwin\UseCases\PersistDigitalTwinRequest.fs" />
+        <Compile Include="Features\PersistDigitalTwin\Controller\PersistDigitalTwinController.fs" />
+        <Compile Include="Features\GetDigitalTwin\Controller\GetDigitalTwinController.fs" />
         <Compile Include="IoC\RootModule.fs"/>
         <Compile Include="Startup.fs"/>
         <Compile Include="Program.fs"/>

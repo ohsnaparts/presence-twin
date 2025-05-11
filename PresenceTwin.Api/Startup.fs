@@ -20,8 +20,7 @@ type Startup() =
         )
         |> ignore
 
-        services.AddSwaggerGen(fun c ->
-            c.SwaggerDoc("v1", new OpenApiInfo(Title = "Presence Twin API", Version = "v1")))
+        services.AddSwaggerGen(fun c -> c.SwaggerDoc("v1", OpenApiInfo(Title = "Presence Twin API", Version = "v1")))
         |> ignore
 
     member _.ConfigureContainer(builder: ContainerBuilder) : unit =

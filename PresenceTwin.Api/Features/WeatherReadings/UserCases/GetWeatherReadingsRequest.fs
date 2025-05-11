@@ -1,4 +1,4 @@
-﻿module PresenceTwin.Api.Features.WeatherReadings.UserCases.GetWeatherReadingsQuery
+﻿module PresenceTwin.Api.Features.WeatherReadings.UserCases.GetWeatherReadingsRequest
 
 open MediatR
 open PresenceTwin.Api.WeatherService
