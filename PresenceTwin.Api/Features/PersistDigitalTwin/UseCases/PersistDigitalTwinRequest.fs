@@ -5,6 +5,9 @@ open System.Threading.Tasks
 open AutoMapper
 open MediatR
 open Microsoft.Extensions.Logging
+open PresenceTwin.Api.Features.PersistDigitalTwin.Repositories.PersistDigitalTwinRepository
+open PresenceTwin.Api.Features.Shared.Infrastructure
+open PresenceTwin.Api.Features.Shared.Infrastructure.DigitalTwinEntity
 open PresenceTwin.Api.Features.Shared.Models.DigitalTwin
 open PresenceTwin.Api.Features.Shared.ViewModels.DigitalTwinViewModel
 
@@ -12,12 +15,12 @@ type PersistDigitalTwinRequest(twin: DigitalTwinViewModel) =
     member val Twin = twin with get
     interface IRequest
 
-type PersistDigitalTwinRequestHandler(logger: ILogger<PersistDigitalTwinRequestHandler>, mapper: IMapper) =
+type PersistDigitalTwinRequestHandler
+    (logger: ILogger<PersistDigitalTwinRequestHandler>, mapper: IMapper, repository: IPersistDigitalTwinRepository) =
     interface IRequestHandler<PersistDigitalTwinRequest> with
         member this.Handle
             (request: PersistDigitalTwinRequest, cancellationToken: System.Threading.CancellationToken)
             : System.Threading.Tasks.Task =
-                let domainTwin = mapper.Map<DigitalTwin>(request.Twin)
-                let json = JsonSerializer.Serialize(domainTwin, JsonSerializerOptions())
-                logger.LogDebug("{context}: {message}", this.GetType().Name, $"Handle {json}")
-                Task.CompletedTask
+            let twin = mapper.Map<DigitalTwinEntity>(request.Twin)
+            repository.Set twin
+            Task.CompletedTask

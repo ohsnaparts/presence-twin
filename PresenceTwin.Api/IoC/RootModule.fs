@@ -1,8 +1,9 @@
 ﻿module PresenceTwin.IoC.RootModule
 
 open Autofac
-open PresenceTwin.Api.Features.Shared.IKeyValueStore
-open PresenceTwin.Api.Features.Shared.InMemoryStore
+open PresenceTwin.Api.Features.PersistDigitalTwin.Repositories.PersistDigitalTwinRepository
+open PresenceTwin.Api.Features.Shared.Store.IKeyValueStore
+open PresenceTwin.Api.Features.Shared.Store.InMemoryStore
 open PresenceTwin.Api.WeatherService
 
 type public RootModule() =
@@ -16,4 +17,9 @@ type public RootModule() =
             .RegisterType<InMemoryKeyValueStore>()
             .As<IKeyValueStore>()
             .SingleInstance()
+        |> ignore
+
+        builder
+            .RegisterType<PersistDigitalTwinRepository>()
+            .As<IPersistDigitalTwinRepository>()
         |> ignore

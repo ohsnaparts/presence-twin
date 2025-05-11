@@ -17,6 +17,7 @@ type public WeatherForecastController
     member _.Get() : Task<WeatherReadingViewModel array> =
         async {
             let! readings = mediatr.Send(GetWeatherReadingsQuery()) |> Async.AwaitTask
+            // TODO: refactor use case layer to return viewmodels
             let viewModels = mapper.Map<WeatherReadingViewModel array>(readings)
             return viewModels
         }
