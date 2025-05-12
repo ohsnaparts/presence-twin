@@ -1,8 +1,15 @@
 ﻿module PresenceTwin.Api.Features.Shared.ViewModels.DigitalTwinViewModel
 
-open System.Collections.Generic
+open PresenceTwin.Api.Features.Shared.ViewModels.DigitalTwinStateViewModel
 
-type DigitalTwinViewModel() =
-    member val DeviceId: string = "" with get,set
-    member val Reported: IDictionary<string, obj> = null with get,set
-    member val Desired: IDictionary<string, obj> = null with get,set
+
+type DigitalTwinViewModel =
+    { DeviceId: int
+      Reported: DigitalTwinStateViewModel
+      Desired: DigitalTwinStateViewModel }
+
+module DigitalTwinViewModel =
+    let create (deviceId: int) =
+        { DeviceId = deviceId
+          Desired = DigitalTwinStateViewModel.empty
+          Reported = DigitalTwinStateViewModel.empty }

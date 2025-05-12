@@ -14,7 +14,7 @@ type public ReadDigitalTwinController(logger: ILogger<ReadDigitalTwinController>
     inherit ControllerBase()
 
     [<HttpGet>]
-    member this.Get(deviceId: string) : Task<DigitalTwinViewModel> =
+    member this.Get(deviceId: int) : Task<DigitalTwinViewModel> =
         async {
             let! twin = mediator.Send(GetDigitalTwinRequest(deviceId)) |> Async.AwaitTask
             return twin

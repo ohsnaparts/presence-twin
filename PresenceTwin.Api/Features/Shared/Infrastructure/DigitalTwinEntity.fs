@@ -1,10 +1,14 @@
 ﻿module PresenceTwin.Api.Features.Shared.Infrastructure.DigitalTwinEntity
 
-open System.Collections.Generic
+open PresenceTwin.Api.Features.Shared.Infrastructure.DigitalTwinStateRecord
 
-type public DigitalTwinEntity(deviceId: string) =
-    member val DeviceId: string = deviceId with get, set
-    member val Reported: IDictionary<string, obj> = Dictionary<string, obj>() with get, set
-    member val Desired: IDictionary<string, obj> = Dictionary<string, obj>() with get, set
-    
-    new() = DigitalTwinEntity("")
+type DigitalTwinEntity =
+    { DeviceId: int
+      Reported: DigitalTwinStateRecord
+      Desired: DigitalTwinStateRecord }
+
+module DigitalTwinEntity =
+    let create (deviceId: int) : DigitalTwinEntity =
+        { DeviceId = deviceId
+          Reported = DigitalTwinStateRecord.empty
+          Desired = DigitalTwinStateRecord.empty }

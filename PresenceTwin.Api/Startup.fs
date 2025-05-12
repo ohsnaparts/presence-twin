@@ -2,7 +2,6 @@
 
 open System
 open System.Reflection
-open AutoMapper.Contrib.Autofac.DependencyInjection
 open Autofac
 open Microsoft.AspNetCore.Builder
 open Microsoft.AspNetCore.Hosting
@@ -25,7 +24,6 @@ type Startup() =
 
     member _.ConfigureContainer(builder: ContainerBuilder) : unit =
         builder.RegisterAssemblyModules(Assembly.GetExecutingAssembly()) |> ignore
-        builder.RegisterAutoMapper(Assembly.GetExecutingAssembly()) |> ignore
 
     member _.Configure(app: IApplicationBuilder, env: IWebHostEnvironment) : unit =
         if env.IsDevelopment() then

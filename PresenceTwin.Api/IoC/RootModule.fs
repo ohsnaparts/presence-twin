@@ -3,8 +3,8 @@
 open Autofac
 open PresenceTwin.Api.Features.GetDigitalTwin.Repository.GetDigitalTwinRepository
 open PresenceTwin.Api.Features.PersistDigitalTwin.Repositories.PersistDigitalTwinRepository
-open PresenceTwin.Api.Features.Shared.Store.IKeyValueStore
-open PresenceTwin.Api.Features.Shared.Store.InMemoryStore
+open PresenceTwin.Api.Features.Shared.Store.IDigitalTwinStore
+open PresenceTwin.Api.Features.Shared.Store.InMemoryDigitalTwinStore
 open PresenceTwin.Api.WeatherService
 
 type public RootModule() =
@@ -15,8 +15,8 @@ type public RootModule() =
         |> ignore
 
         builder
-            .RegisterType<InMemoryKeyValueStore>()
-            .As<IKeyValueStore>()
+            .RegisterType<InMemoryDigitalTwinStore>()
+            .As<IDigitalTwinStore>()
             .SingleInstance()
         |> ignore
 

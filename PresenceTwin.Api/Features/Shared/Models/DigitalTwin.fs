@@ -1,8 +1,14 @@
 ﻿module PresenceTwin.Api.Features.Shared.Models.DigitalTwin
 
-open System.Collections.Generic
+open PresenceTwin.Api.Features.Shared.Models.DigitalTwinState
 
-type DigitalTwin(deviceId: string, reported: IDictionary<string, obj>, desired: IDictionary<string, obj>) =
-    member val DeviceId: string = deviceId with get,set
-    member val Reported: IDictionary<string, obj> = reported with get, set
-    member val Desired: IDictionary<string, obj> = desired with get, set
+type DigitalTwin =
+    { DeviceId: int
+      Reported: DigitalTwinState
+      Desired: DigitalTwinState }
+
+module DigitalTwin =
+    let create deviceId : DigitalTwin =
+        { DeviceId = deviceId
+          Reported = DigitalTwinState.empty
+          Desired = DigitalTwinState.empty }

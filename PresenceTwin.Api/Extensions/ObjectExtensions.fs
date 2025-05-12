@@ -11,3 +11,7 @@ type ObjectExtensions =
         let jsonSerializerOptions = JsonSerializerOptions()
         jsonSerializerOptions.PropertyNameCaseInsensitive <- true
         JsonSerializer.Serialize(o, jsonSerializerOptions)
+        
+module ObjectUtils =
+    let toJson (o: obj) =
+        o.ToJson()
